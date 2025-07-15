@@ -1,0 +1,40 @@
+@use 'variable';
+
+body {
+  width: 100%;
+}
+
+.header {
+  height: 100px;
+  width: 400px;
+  background-color: variable.$navy;
+  }
+
+
+.side_main_container {
+  display: flex;
+}
+
+
+
+.sidebar {
+  height: 250px;
+  width: 150px;
+  background-color: variable.$green;
+}
+
+
+.main {
+  height: 250px;
+  width: 250px;
+  background-color: variable.$red;
+
+}
+
+
+.footer {
+  height: 100px;
+  width: 400px;
+  background-color: variable.$brown;  
+
+}
