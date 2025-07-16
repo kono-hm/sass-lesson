@@ -1,0 +1,21 @@
+  
+  @mixin header_box($boxColor) {
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    background-color: $boxColor;
+
+  }
+
+  @mixin main_box($boxColor) {
+    display: block;
+    height: 40px;
+    width: 140px;
+    margin: 5px;
+    background-color: $boxColor;
+
+  }
+
+
+
