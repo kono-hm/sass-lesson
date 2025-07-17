@@ -6,15 +6,20 @@
   height: 100px;
   width: 400px;
   background-color: variable.$navy;
-    &_box_container {
-      width: 160px;
-      height: 60px;
-      display: flex;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: variable.$white;
+  &_box_container {
+    width: 160px;
+    height: 60px;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: variable.$white;
+    & > div {
+      &:not(:last-child){
+        margin-right: 0px;
+      }
     }
+  }
 
   @each $box_color in variable.$classNames {
     $index_key: index(variable.$classNames, $box_color);
@@ -22,16 +27,17 @@
     &_box_#{$box_color} {
       $color: nth(variable.$boxColor, $index_key);
       @include mixin.header_box($color);
-      margin: 10px 0 10px 10px;
-      &:last-child {
-        margin-right: 10px;
-      }      
+      // margin: 10px 0 10px 10px;    
     }
   }
 }
 
-.side_main_container {
-  display: flex;
+.side{
+  &_main{
+    &_container {
+      display: flex;
+    }
+  }
 }
 
 .sidebar {
@@ -54,16 +60,17 @@
     &_box_#{$box_color} {
       $color: nth(variable.$boxColor, $index_key);
         @include mixin.main_box($color);
-        margin-top: 5px;
-        margin-left: 5px;
+        margin: 5px, 
     }
   }
 
-  &_box_container {
-    background-color: variable.$white;
-    width: 150px;
-    height: 50px;
-    margin-left:40px;
+  &_box{
+    &_container {
+      background-color: variable.$white;
+      width: 150px;
+      height: 50px;
+      margin-left:40px;
+    }
   }
   &_box_container:first-child {
     margin-top: 40px;
