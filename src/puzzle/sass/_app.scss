@@ -23,9 +23,9 @@
       $color: nth(variable.$boxColor, $index_key);
       @include mixin.header_box($color);
       margin: 10px 0 10px 10px;
-    }
-    &_box_blue {
-      margin-right: 10px;
+      &:last-child {
+        margin-right: 10px;
+      }      
     }
   }
 }
